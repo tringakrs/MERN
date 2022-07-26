@@ -5,6 +5,8 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { FaThumbsUp } from 'react-icons/fa';
+import { FaHome } from 'react-icons/fa';
 
 const Pet = (props) => {
 
@@ -66,7 +68,7 @@ const Pet = (props) => {
                     <h1>Pet Shelter</h1>
                 </Col>
                 <Col className="text-end">
-                    <Link to={"/pets"}>Home</Link>
+                    <Link to={"/pets"}>back to home</Link>
                 </Col>
             </Row>
             <Row className="my-3 py-2
@@ -75,7 +77,7 @@ const Pet = (props) => {
                     <h3 className="my-2">Details about: {pet.petName}</h3>
                 </Col>
                 <Col className="text-end">
-                <Button type="button" className="btn btn-danger my-2" onClick={(e) => adoptPetHandler(id)}>Adopt me</Button>
+                <Button type="button" className="btn btn-danger my-2" onClick={(e) => adoptPetHandler(id)}> <FaHome/>Adopt {pet.petName}</Button>
                 </Col>
             </Row>
             <Row className="border">
@@ -107,7 +109,7 @@ const Pet = (props) => {
                 </Row>
                 <div className=" d-flex justify-content-center mb-3">
 
-                <button  className="btn-success w-20 text-center mx-5" onClick={ e => {likePet(pet._id)}} id="button">Like me</button>
+                <button  className="btn-success w-20 text-center mx-5" onClick={ e => {likePet(pet._id)}} id="button"><FaThumbsUp />Like {pet.petName}</button>
 
                 <div className='ml-3'>0 like(s)</div>
 
