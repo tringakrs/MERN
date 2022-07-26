@@ -6,6 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import { FaUpload } from 'react-icons/fa';
 
 const NewPet = () => {
 
@@ -47,13 +48,13 @@ const NewPet = () => {
                 </Col>
                 <Col lg={3}>
                     <p className="mt-4 my-2 px-2 text-start">
-                        <Link to={"/pets"}>Back to Home</Link>
+                        <Link to={"/pets"}>back to home</Link>
                     </p>
                 </Col>
             </Row>
             <Row>
                 <Col lg={10} className="mx-auto my-2 text-start">
-                    <h3>Know a pet needing a home</h3>
+                    <h3>Know a pet needing a home?</h3>
                 </Col>
             </Row>
             <Row>
@@ -96,7 +97,7 @@ const NewPet = () => {
                     />
                     {errors.petDescription ? <span>{errors.petDescription.message}</span> : null}
                 </Form.Group>
-                <Button type="submit" className="bg-white text-primary">:Upload: Add Pet</Button>
+                <Button type="submit" className="bg-primary text-white"><FaUpload/> Add Pet</Button>
                 </Col>
                 </Col>
                 <Col lg={9}>
