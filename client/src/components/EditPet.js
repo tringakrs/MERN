@@ -6,6 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import { GiPencil } from "react-icons/gi";
 
 const EditPet = () => {
 
@@ -66,7 +67,7 @@ const EditPet = () => {
                 </Col>
                 <Col lg={3}>
                     <p className="my-2 px-2 text-start">
-                        <Link to={"/pets"}>Home</Link>
+                        <Link to={"/pets"}>back to home</Link>
                     </p>
                 </Col>
             </Row>
@@ -77,7 +78,7 @@ const EditPet = () => {
             </Row>
             
             <Col lg={9} className="mx-auto my-3">
-            <Form className="bg-white rounded-3 p-3 text-light d-flex justify-content-center" onSubmit={onUpdateHandler}>
+            <Form className="bg-white rounded-3 p-3 text-light d-flex justify-content-center border" onSubmit={onUpdateHandler}>
                 <Col lg={6} className="mx-auto">
                     <Col lg={9}>
                 <Form.Group className="my-2 py-2 text-start" controlId="formName">
@@ -116,7 +117,7 @@ const EditPet = () => {
                     {errors.petDescription ? <span>{errors.petDescription.message}</span> : null}
                 </Form.Group>
                 </Col>
-                <Button type="submit">Update Pet</Button>
+                <Button type="submit"><GiPencil />Edit Pet</Button>
                     </Col>
                 <Row>
                 <Col lg={11} >
